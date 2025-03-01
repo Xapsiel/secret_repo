@@ -1,6 +1,7 @@
 package httpv1
 
 import (
+	"girls/internal/config"
 	"girls/internal/model"
 	"girls/internal/service"
 
@@ -11,16 +12,20 @@ import (
 type Router struct {
 	service service.Service
 	Domain  string
+	Title   string
 }
 
-func NewRouter(service service.Service) *Router {
+func NewRouter(service service.Service, cfg config.HostConfig) *Router {
 	return &Router{
 		service: service,
+		Domain:  cfg.Domain,
+		Title:   cfg.Title,
 	}
 }
 func (r *Router) NewPage() *model.Page {
 	return &model.Page{
 		Domain: r.Domain,
+		Title:  r.Title,
 	}
 }
 func (r *Router) Routes(app fiber.Router) {

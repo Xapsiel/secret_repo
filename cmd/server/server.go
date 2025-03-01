@@ -41,7 +41,7 @@ func main() {
 
 	engine := html.New("./web/views", ".gohtml")
 	engine.Reload(true)
-	router := httpv1.NewRouter(*services)
+	router := httpv1.NewRouter(*services, cfg.HostConfig)
 	app := fiber.New(fiber.Config{
 		Views: engine,
 	})

@@ -13,7 +13,6 @@ type CongratulationResponse struct {
 
 func (r *Router) CongratulationsHandler(c *fiber.Ctx) error {
 	page := r.NewPage()
-	page.Title = "фор вуманс"
 	cong, err := r.service.ReadCongratulations()
 	if err != nil {
 		return err

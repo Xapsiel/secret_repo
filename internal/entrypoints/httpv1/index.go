@@ -12,7 +12,6 @@ type IndexResponse struct {
 
 func (r *Router) IndexHandler(c *fiber.Ctx) error {
 	page := r.NewPage()
-	page.Title = "фор вуманс"
 	resp := IndexResponse{
 		page,
 	}

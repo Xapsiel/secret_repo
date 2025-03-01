@@ -12,9 +12,10 @@ type BotConfig struct {
 	Key string `yaml:"key"`
 }
 type HostConfig struct {
-	IsProduction bool   `yaml:"isProduction"` //Template reloads, serve adds/analytics
-	Port         string `yaml:"port"`         //`env:"PORT" env-default:"9000"`
-	Domain       string `yaml:"domain"`       //`env:"DOMAIN" env-default:"http://127.0.0.1:9000"`
+	IsProduction bool   `yaml:"isProduction"`
+	Port         string `yaml:"port"`
+	Domain       string `yaml:"domain"`
+	Title        string `yaml:"title"`
 }
 type DatabaseConfig struct {
 	Host           string `yaml:"host"`
