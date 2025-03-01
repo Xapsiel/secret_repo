@@ -1,0 +1,79 @@
+<header class="navbar navbar-expand-lg bg-light w-100 shadow-sm header">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-danger fw-bold" href="{{.Domain}}/">🌸 Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{{.Domain}}/congratulations">🎁 Поздравления</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" onclick="openModal()">⭐ Оценить</a>
+                </li>
+            </ul>
+        </div>
+        <div class="modal fade" id="ratingModal" tabindex="-1" aria-labelledby="ratingModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ratingModalLabel">Понравилось ли вам наше поздравление?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-around">
+                            <button id="yesButton" class="btn btn-success">Да</button>
+                            <button id="noButton" class="btn btn-danger">Нет</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   
+
+    </div>
+</header>
+<script>
+    function openModal() {
+        var modal = new bootstrap.Modal(document.getElementById('ratingModal'));
+        modal.show();
+    }
+
+    function getRandomPosition() {
+        const x = Math.random() * 300;
+        const y = Math.random() * 300;
+        return { x: x, y: y };
+    }
+
+    document.getElementById('noButton').addEventListener('mouseover', function() {
+        const position = getRandomPosition();
+        this.style.position = 'absolute';
+        this.style.left = `${position.x}px`;
+        this.style.top = `${position.y}px`;
+    });
+    document.getElementById("yesButton").addEventListener("mouseover", function (){
+        document.getElementById('ratingModalLabel').textContent = "Сосал?";
+    })
+    document.getElementById("yesButton").addEventListener("mouseout", function () {
+        document.getElementById('ratingModalLabel').textContent = "Понравилось ли вам наше поздравление?";
+    });
+
+    document.getElementById('yesButton').addEventListener('click', function() {
+        alert("Мы рады, что вам понравилось");
+        var modal = bootstrap.Modal.getInstance(document.getElementById('ratingModal'));
+        modal.hide();
+    });
+
+    document.getElementById('noButton').addEventListener('click', function() {
+        alert("Жаль, что вам не понравилось. Мы учтем ваше мнение и кикнем каждого кто нажал на этот вариант из группы!");
+        var modal = bootstrap.Modal.getInstance(document.getElementById('ratingModal'));
+        modal.hide();
+    });
+</script>

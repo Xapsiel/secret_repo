@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(135deg, #fef2f3, #f8d6e6, #f1c6d8); /* Пастельные розовые оттенки */
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #f7c8d5, #e3a7c6);  /* Легкий персиковый и лавандовый градиент */
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+footer {
+    background: linear-gradient(135deg, #f7c8d5, #e3a7c6);  /* Тот же лавандово-персиковый градиент для футера */
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+main {
+    background: rgba(255, 255, 255, 0.95);  /* Легкий белый фон */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.btn-danger {
+    background: #f7a7c1;  /* Мягкий розовый персиковый цвет для кнопки */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.btn-danger:hover {
+    background: #f28098;  /* Немного темнее при наведении */
+}
+
+.navbar-text {
+    color: #6c4f6d;  /* Лавандовый цвет для текста */
+}
+
+.nav-link {
+    color: #6c4f6d !important;  /* Лавандовые ссылки в навигации */
+}
+
+.nav-link:hover {
+    color: #9f5c84 !important;  /* Немного более темный оттенок для наведения */
+}
+
+.navbar-toggler-icon {
+    background-color: #f7c8d5;  /* Лавандовый цвет для иконки меню */
+}
+.lead {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+.congratulation-card {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.congratulation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nickname {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.author {
+    font-size: 1rem;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.text-muted {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.congratulation-card p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .congratulation-card {
+        width: 90%;
+        padding: 15px;
+
+    }
+}

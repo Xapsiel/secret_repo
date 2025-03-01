@@ -1,0 +1,17 @@
+<main class="container text-center my-5">
+    <h1 class="text-danger fw-bold">🎉 Поздравления с 8 Марта! 🎉</h1>
+    <p class="lead">Здесь собраны поздравления от наших парней💖💖💖💖</p>
+
+    <div id="congratulations-list" class="d-flex flex-column align-items-center">
+        {{range .Congratulations}}
+            <div class="congratulation-card mb-4" style="width: 100%; max-width: 600px; padding: 20px; border: 1px solid #f0f0f0; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); background-color: #fff; transition: all 0.3s ease;">
+                <p class="text-muted" style="font-size: 1.1rem; line-height: 1.6;">{{.Text}}</p>
+                <p class="nickname text-primary" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">{{.NickName}}</p>
+                <p class="author text-secondary" style="font-size: 1rem; font-style: italic;">— {{.NickName}} (@{{.TelegramName}})</p>
+            </div>
+        {{else}}
+            <p>Поздравлений пока нет. Будьте первым, кто поздравит!</p>
+        {{end}}
+    </div>
+</main>
+

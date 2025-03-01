@@ -1,0 +1,5 @@
+
+web/assets/img/*
+web/assets/favicon/*
+config/*
+.idea
