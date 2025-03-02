@@ -58,12 +58,7 @@
         this.style.left = `${position.x}px`;
         this.style.top = `${position.y}px`;
     });
-    document.getElementById("yesButton").addEventListener("mouseover", function (){
-        document.getElementById('ratingModalLabel').textContent = "Сосал?";
-    })
-    document.getElementById("yesButton").addEventListener("mouseout", function () {
-        document.getElementById('ratingModalLabel').textContent = "Понравилось ли вам наше поздравление?";
-    });
+
 
     document.getElementById('yesButton').addEventListener('click', function() {
         alert("Мы рады, что вам понравилось");
