@@ -3,9 +3,9 @@ CREATE TABLE IF NOT EXISTS holidays(
                                        text TEXT NOT NULL,
                                        author VARCHAR(100) NOT NULL DEFAULT 'Anonymus',
                                        telegram_name VARCHAR(150) NOT NULL UNIQUE CHECK (telegram_name IN (
-                                                                                                           'Banan4ik_kmy', 'HeriofOmen', 'SaniySotkuVerni', 'Xapsiel', 'Zavsegdat1y',
-                                                                                                           'R7821699990', 'Metelykx', 'Whysirnik', 'Squerizz', 'F1rer0se',
-                                                                                                           'Timedust11', 'Dsedulya', 'Ssvivss', 'Beo_blod', 'Quinsone425',
-                                                                                                           'Why_n00tt', 'Bruhrayz', 'Letai_kak_ya', 'Selimqwe', 'Belyasha82', 'Myatiy_lox'
+                                                                                                           'banan4ik_kmy','glavadetdoma', 'heriofOmen', 'saniysotkuverni', 'xapsiel', 'zavsegdat1y',
+                                                                                                           'r7821699990', 'metelykx', 'whysirnik', 'squerizz', 'f1rer0se',
+                                                                                                           'timedust11', 'dsedulya', 'ssvivss', 'beo_blod', 'quinsone425',
+                                                                                                           'why_n00tt', 'bruhrayz', 'letai_kak_ya', 'selimqwe', 'belyasha82', 'myatiy_lox'
                                            ))
 );

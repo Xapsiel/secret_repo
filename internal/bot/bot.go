@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"strings"
 	"unicode/utf8"
 
 	"girls/internal/model"
@@ -64,7 +65,7 @@ func (b *Bot) Start() {
 					_, err := b.service.WriteCongratulations(model.Congratulations{
 						Text:         b.Users[chatid].Text,
 						NickName:     b.Users[chatid].Nickname,
-						TelegramName: b.Users[chatid].Username,
+						TelegramName: strings.ToLower(b.Users[chatid].Username),
 					})
 					if err != nil {
 						slog.Error(err.Error())
